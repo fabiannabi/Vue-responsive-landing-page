@@ -1,0 +1,75 @@
+<template>
+  <div>
+    <div class="header">
+      <div class="header-logo">
+        <img src="../assets/pngocean.com.png" alt />
+      </div>
+    </div>
+    <div class="btn">
+      <button>Play it Now</button>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "app",
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100vw;
+  height: 500px;
+  background-size: cover;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(207, 207, 197, 0.726);
+}
+.header-logo img {
+  display: flex;
+  width: 800px;
+  margin: 4rem;
+}
+
+.btn {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 2rem;
+}
+button {
+  background-color: aqua;
+  width: 100%;
+  margin: 16px;
+  padding: 12px 29px;
+  border-radius: 15px;
+  font-family: "Open Sans", sans-serif;
+  height: 6rem;
+  font-size: 58px;
+}
+@media (max-width: 768px) {
+  button {
+    background-color: aqua;
+    width: 30%;
+    margin: 15px;
+    padding: 12px 29px;
+    border-radius: 15px;
+    font-family: "Open Sans", sans-serif;
+    height: 4rem;
+    font-size: 29px;
+  }
+}
+</style>
