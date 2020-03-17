@@ -6,13 +6,17 @@
     <div class="heroes-title--secnd">
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, facere. Reiciendis alias iusto impedit non quasi</p>
     </div>
-    <div v-for="hero in heroes" :key="hero.id">
-      <div class="thumbnails">
-        <p class="name">{{hero.name}}</p>
-        <figure class="thumbnail-hero">
-          <img :src="hero.img" alt="hero" />
-        </figure>
-        <p class="description">{{hero.description}}</p>
+    <div class="cards">
+      <div v-for="hero in heroes" :key="hero.id">
+        <div class="thumbnails">
+          <p class="name">{{hero.name}}</p>
+          <div class="cards-inner">
+            <figure class="thumbnail-hero">
+              <img :src="hero.img" alt="hero" />
+            </figure>
+            <p class="description">{{hero.description}}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -46,7 +50,7 @@ export default {
           name: "Doomfist",
           img: "./src/assets/doomfist-profile.png",
           description:
-            "Doomfist’s cybernetics make him a highly-mobile, powerful frontline fighter. In addition to dealing ranged damage with his Hand Cannon, Doomfist can slam the ground, knock enemies into the air and off balance, or charge into the fray with his Rocket Punch."
+            "Doomfist’s cybernetics make him a highly-mobile, powerful frontline fighter. In addition to dealing ranged damage with his Hand Cannon, Doomfist can slam the ground, knock enemies into the air and off balance."
         }
       ]
     };
@@ -103,7 +107,7 @@ export default {
 }
 .heroes-body {
   background-color: hsl(210, 32%, 93%);
-  padding: 3rem 3rem;
+  padding: 2rem 2rem;
 }
 .heroes-title {
   font-size: 60px;
@@ -121,18 +125,37 @@ export default {
 }
 
 @media (min-width: 1000px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cards-inner {
+    display: flex;
+    margin: 1rem 1rem;
+  }
   .thumbnails {
-    margin: auto;
-    min-width: 500px;
-    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 6rem;
+    margin-right: 3rem;
+    align-content: center;
+    height: 300px;
+    width: 800px;
     background-color: hsl(210, 90%, 97%);
     margin-bottom: 3rem;
     border-radius: 5px;
-    padding: 2rem;
     box-shadow: 0 5px 10px hsl(212, 18%, 35%);
   }
+  .name {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    border-bottom: 0.5px dotted black;
+  }
   .description {
-    font-size: 30px;
+    font-size: 16px;
     text-align: justify;
     padding: 1.5rem;
     font-family: "Open Sans", sans-serif;
@@ -154,7 +177,8 @@ export default {
   }
   .thumbnail-hero img {
     clip-path: circle(41.8% at 50% 50%);
-    width: 15rem;
+    width: 8rem;
+    margin-right: 1rem;
   }
   .heroes-title {
     font-size: 60px;
