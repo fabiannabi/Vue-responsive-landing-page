@@ -1,12 +1,19 @@
 <template>
-  <div class="maps-body">
-    <div class="maps-title">
+  <div class="teams-body">
+    <div class="teams-title">
       <p>Pro League Teams</p>
     </div>
-    <div class="maps-title--secnd">
+    <div class="teams-title--secnd">
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, facere. Reiciendis alias iusto impedit non quasi</p>
     </div>
-    <carousel :autoplay="true" :nav="false" :loop="true" :dots="false" :items="1">
+    <carousel
+      class="carousel-teams"
+      :autoplay="true"
+      :nav="false"
+      :loop="true"
+      :dots="false"
+      :items="1"
+    >
       <img src="../assets/soul.png" />
       <img src="../assets/huston.png" />
       <img src="../assets/london.png" />
@@ -36,19 +43,30 @@ export default {
   box-sizing: border-box;
 }
 
-.maps-body {
+.teams-body {
   padding: 3rem 3rem;
 }
-.maps-title {
+.teams-title {
   font-size: 60px;
   text-align: center;
   margin: 3rem;
   margin-bottom: 0;
   border-bottom: 0.5px solid black;
 }
-.maps-title--secnd {
+.teams-title--secnd {
   font-size: 36px;
   text-align: center;
   margin: 7rem 1rem;
+}
+.carousel-teams {
+  box-shadow: 0 5px 15px hsl(212, 18%, 35%);
+}
+@media (min-width: 1000px) {
+  .teams-title--secnd {
+    font-size: 40px;
+    text-align: center;
+    margin: 7rem 1rem;
+    color: hsl(212, 18%, 35%);
+  }
 }
 </style>

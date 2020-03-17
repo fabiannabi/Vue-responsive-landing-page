@@ -55,5 +55,6 @@ export default {
 }
 .footer li img {
   border-radius: 100%;
+  box-shadow: 0 5px 15px hsl(212, 18%, 35%);
 }
 </style>

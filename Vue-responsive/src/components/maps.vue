@@ -6,7 +6,14 @@
     <div class="maps-title--secnd">
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, facere. Reiciendis alias iusto impedit non quasi</p>
     </div>
-    <carousel :autoplay="true" :nav="false" :loop="true" :dots="false" :items="1">
+    <carousel
+      class="carousel-maps"
+      :autoplay="true"
+      :nav="false"
+      :loop="true"
+      :dots="false"
+      :items="1"
+    >
       <img src="../assets/ayutthaya.jpg" />
       <img src="../assets/black-forest.jpg" />
       <img src="../assets/blizzard-world.jpg" />
@@ -29,7 +36,8 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" 
+>
 * {
   margin: 0;
   padding: 0;
@@ -50,5 +58,17 @@ export default {
   font-size: 36px;
   text-align: center;
   margin: 7rem 1rem;
+}
+.carousel-maps {
+  box-shadow: 0 5px 15px hsl(212, 18%, 35%);
+}
+
+@media (min-width: 1000px) {
+  .maps-title--secnd {
+    font-size: 40px;
+    text-align: center;
+    margin: 7rem 1rem;
+    color: hsl(212, 18%, 35%);
+  }
 }
 </style>

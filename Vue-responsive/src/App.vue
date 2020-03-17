@@ -31,6 +31,6 @@ export default {
 
 <style lang="scss">
 body {
-  background-color: rgb(191, 209, 194);
+  background-color: hsl(210, 38%, 93%);
 }
 </style>

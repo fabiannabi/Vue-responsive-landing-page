@@ -36,7 +36,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(207, 207, 197, 0.726);
+  background-color: hsl(210, 38%, 93%);
 }
 .header-logo img {
   display: flex;
@@ -50,8 +50,13 @@ export default {
   justify-content: center;
   margin: 2rem;
 }
+
 button {
-  background-color: aqua;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(50, 100%, 50%),
+    hsl(32, 100%, 50%)
+  );
   width: 100%;
   margin: 16px;
   padding: 12px 29px;
@@ -59,10 +64,13 @@ button {
   font-family: "Open Sans", sans-serif;
   height: 6rem;
   font-size: 58px;
+  color: hsl(32, 100%, 20%);
+  box-shadow: 0 5px 10px hsl(212, 18%, 35%), 0 2px 5px hsl(212, 18%, 35%);
 }
-@media (max-width: 768px) {
+
+@media only screen and (min-width: 1000px) {
   button {
-    background-color: aqua;
+    background-color: red;
     width: 30%;
     margin: 15px;
     padding: 12px 29px;
