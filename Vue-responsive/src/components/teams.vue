@@ -23,6 +23,23 @@
       <img src="../assets/dragons.png" />
       <img src="../assets/fuel.png" />
     </carousel>
+    <carousel
+      class="carousel-teams--big"
+      :autoplay="true"
+      :nav="false"
+      :loop="true"
+      :dots="false"
+      :items="3"
+    >
+      <img src="../assets/soul.png" />
+      <img src="../assets/huston.png" />
+      <img src="../assets/london.png" />
+      <img src="../assets/ny.png" />
+      <img src="../assets/shock.png" />
+      <img src="../assets/boston.png" />
+      <img src="../assets/dragons.png" />
+      <img src="../assets/fuel.png" />
+    </carousel>
   </div>
 </template>
 
@@ -62,12 +79,24 @@ export default {
 .carousel-teams {
   box-shadow: 0 5px 15px hsl(212, 18%, 35%);
 }
+.carousel-teams--big {
+  box-shadow: 0 5px 15px hsl(212, 18%, 35%);
+  display: none;
+}
 @media (min-width: 1000px) {
   .teams-title--secnd {
     font-size: 40px;
     text-align: center;
     margin: 7rem 1rem;
     color: hsl(212, 18%, 35%);
+  }
+  .carousel-teams {
+    box-shadow: 0 5px 15px hsl(212, 18%, 35%);
+    display: none;
+  }
+  .carousel-teams--big {
+    box-shadow: 0 5px 15px hsl(212, 18%, 35%);
+    display: flex;
   }
 }
 </style>

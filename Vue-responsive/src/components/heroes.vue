@@ -127,6 +127,8 @@ export default {
 @media (min-width: 1000px) {
   .cards {
     display: flex;
+    justify-content: center;
+    align-content: center;
     flex-wrap: wrap;
   }
   .cards-inner {

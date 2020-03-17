@@ -7,12 +7,29 @@
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, facere. Reiciendis alias iusto impedit non quasi</p>
     </div>
     <carousel
-      class="carousel-maps"
+      class="carousel-maps--mobile"
       :autoplay="true"
       :nav="false"
       :loop="true"
       :dots="false"
       :items="1"
+    >
+      <img src="../assets/ayutthaya.jpg" />
+      <img src="../assets/black-forest.jpg" />
+      <img src="../assets/blizzard-world.jpg" />
+      <img src="../assets/busan.jpg" />
+      <img src="../assets/dorado.jpg" />
+      <img src="../assets/eichenwalde.jpg" />
+      <img src="../assets/hanamura.jpg" />
+      <img src="../assets/junkertown.jpg" />
+    </carousel>
+    <carousel
+      class="carousel-maps--big"
+      :autoplay="true"
+      :nav="false"
+      :loop="true"
+      :dots="false"
+      :items="3"
     >
       <img src="../assets/ayutthaya.jpg" />
       <img src="../assets/black-forest.jpg" />
@@ -60,8 +77,12 @@ export default {
   margin: 7rem 1rem;
   color: hsl(212, 18%, 35%);
 }
-.carousel-maps {
+.carousel-maps--mobile {
   box-shadow: 0 5px 15px hsl(212, 18%, 35%);
+}
+.carousel-maps--big {
+  box-shadow: 0 5px 15px hsl(212, 18%, 35%);
+  display: none;
 }
 
 @media (min-width: 1000px) {
@@ -70,6 +91,15 @@ export default {
     text-align: center;
     margin: 7rem 1rem;
     color: hsl(212, 18%, 35%);
+  }
+  .carousel-maps--big {
+    box-shadow: 0 5px 15px hsl(212, 18%, 35%);
+    display: flex;
+  }
+
+  .carousel-maps--mobile {
+    box-shadow: 0 5px 15px hsl(212, 18%, 35%);
+    display: none;
   }
 }
 </style>
