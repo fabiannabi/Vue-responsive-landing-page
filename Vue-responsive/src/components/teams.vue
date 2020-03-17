@@ -57,6 +57,7 @@ export default {
   font-size: 36px;
   text-align: center;
   margin: 7rem 1rem;
+  color: hsl(212, 18%, 35%);
 }
 .carousel-teams {
   box-shadow: 0 5px 15px hsl(212, 18%, 35%);
